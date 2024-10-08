@@ -1,10 +1,6 @@
-// export const settings = {
-//     host: '',
-// };
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+export const settings = {
+    host: 'http://localhost:3000',
+};
 
 async function request(url, options) {
     try {
