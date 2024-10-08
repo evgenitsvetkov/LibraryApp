@@ -32,9 +32,9 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Start the client
-      run: npm start 
+      run: npm start &
     - name: Start the server
-      run: node server/server.js 
+      run: node server/server.js &
     - name: Install playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
