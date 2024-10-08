@@ -18,6 +18,8 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm install
+    - name: Start the client
+      run: npm start &
     - name: Start the server
       run: node server/server.js &
 
@@ -33,6 +35,8 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm install
+    - name: Start the client
+      run: npm start &
     - name: Start the server
       run: node server/server.js &
     - name: Install playwright Browsers
