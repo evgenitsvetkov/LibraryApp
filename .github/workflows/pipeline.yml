@@ -17,9 +17,9 @@ jobs:
       with:
         node-version: 20
     - name: Install dependencies
-    - run: npm install
+      run: npm install
     - name: Start the server
-    - run: node server/server.js &
+      run: node server/server.js &
 
   test:
     runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
       with:
         node-version: 20
     - name: Install dependencies
-    - run: npm install
+      run: npm install
     - name: Start the server
-    - run: node server/server.js &
+      run: node server/server.js &
     - name: Execute UI tests
-    - run: npm test
+      run: npm test
