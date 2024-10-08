@@ -33,6 +33,8 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm install
+    - name: Install playwright
+      run: npx playwright install 
     - name: Start the server
       run: node server/server.js &
     - name: Execute UI tests
