@@ -33,9 +33,9 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm install
-    - name: Install playwright
-      run: npx playwright install 
     - name: Start the server
       run: node server/server.js &
-    - name: Execute UI tests
-      run: npm test
+    - name: Install playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npx playwright test
