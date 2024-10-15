@@ -1,6 +1,6 @@
 import * as api from './api.js';
 
-const host = 'https://libraryapp-hsyg.onrender.com'
+const host = 'http://localhost:3030'
 api.settings.host = api.settings.host;
 
 export const login = api.login;
