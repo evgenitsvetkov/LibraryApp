@@ -20,13 +20,13 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Update the config
-      run: echo "export const settings = {host:\"https://localhost:3030\"}" > src/config.js
+      run: echo "export const settings = {host:\"http://localhost:3030\"}" > src/config.js
     - name: Start Backend
       run: npm run start:be &
     - name: Start Frontend
       run: npm run start:fe &
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install
     - name: Run Playwright tests
       run: npm run test:ui
 
@@ -41,7 +41,7 @@ jobs:
           wait_deploy: true
   
   deploy-fe:
-    needs: deploy-be
+    needs: build_test
     runs-on: ubuntu-latest
     steps:
       - uses: JorgeLNJunior/render-deploy@v1.4.4
